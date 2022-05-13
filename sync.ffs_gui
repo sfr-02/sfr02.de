@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="GUI" XmlFormat="17">
+    <Compare>
+        <Variant>Content</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Variant>TwoWay</Variant>
+        <DetectMovedFiles>false</DetectMovedFiles>
+        <DeletionPolicy>Permanent</DeletionPolicy>
+        <VersioningFolder Style="Replace"/>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>*/.Trash-*/</Item>
+            <Item>*/.recycle/</Item>
+            <Item>.git/</Item>
+            <Item>/components/</Item>
+            <Item>/usage/</Item>
+            <Item>/logs/</Item>
+            <Item>/cgi-bin/</Item>
+        </Exclude>
+        <TimeSpan Type="None">0</TimeSpan>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left>/home/patrick/Documents/sfr02.de/_site</Left>
+            <Right>ftp://w0074519@sfr02.de|pass64=aW5zZXJ0IHBhc3N3b3JkIGhlcmU=</Right>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="false" Retry="0" Delay="5"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder/>
+    <EmailNotification Condition="Always"/>
+    <Gui>
+        <GridViewType>Difference</GridViewType>
+    </Gui>
+</FreeFileSync>
