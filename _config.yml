@@ -13,3 +13,5 @@ include:
   - .htaccess
   - "*_*.jpg"
 
+exclude:
+  - sync.ffs_gui
