@@ -11,3 +11,5 @@ defaults:
 
 include:
   - .htaccess
+  - "*_*.jpg"
+
