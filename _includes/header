@@ -1,0 +1,58 @@
+<!--Start Header-->
+<section id="fixed-navbar">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle"
+          data-toggle="collapse"
+          data-target="#main-nav"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" rel="home" href="#" title="sfr02."
+          ><img width="90" height="90" alt="SFR02" src="img/sfr02logo90x90.png"
+        /></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/#home">Start</a></li>
+          <li><a href="/#team">Verein</a></li>
+          <li><a href="/#services">Mannschaften</a></li>
+
+          <li class="dropdown">
+            <span class="dropdown-toggle" data-toggle="dropdown"
+              >Jugendfußball <b class="caret"></b
+            ></span>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/bambini.html">Bambini</a>
+              </li>
+              <li>
+                <a href="/bjugend.html">B-Jugend</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/kader.html">Aktive</a></li>
+          <li><a href="/sfr02news.html">Neues</a></li>
+          <li><a href="/#price-list">Beitritt</a></li>
+          <!-- <li><a href="#our-work">Kader</a></li> -->
+          <li><a href="/sportheim.html">Sportheim</a></li>
+          <li><a href="/dienstagssport.html">Dienstagssport</a></li>
+          <li><a href="/klinik-kicker.html">Klinik Kicker</a></li>
+          <li><a href="/#contact-form">Kontakt</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+</section>
+<!--End Header-->

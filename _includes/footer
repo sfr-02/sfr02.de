@@ -1,0 +1,46 @@
+<!-- Start Footer -->
+<footer id="footer">
+  <div class="col-lg-12 text-center">
+    <div class="back-to-top">
+      <i class="fa fa-angle-double-up"></i>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12 footer-social">
+        <ul class="connected-icons text-center">
+          <li class="connected-icon">
+            <a target="_blank" href="https://twitter.com/webteamsfr02"
+              ><i class="fa fa-twitter fa-2-5x"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <p>Erleben Sie uns!</p>
+      <h4 class="footer-logo">
+        <a href="/#">Sportfreunde 02 Reutlingen</a>
+      </h4>
+
+      <div class="col-lg-12 footer-menu">
+        <span class="pull-left"
+          >Copyright © 2014 <a href="#" style="margin: 0">SFR02</a>. All Rights
+          Reserved.</span
+        >
+        <span class="pull-right">
+          <a href="/#home">Start</a>
+          <a href="/#about">Ihr</a>
+          <a href="/#services">Verein</a>
+          <a href="/#services">Mannschaften</a>
+          <a href="/#price-list">Beitritt</a>
+          <a href="/kader.html">Aktive</a>
+          <a href="/sfr02news.html">Neues</a>
+          <a href="/#contact">Kontakt</a>
+          <a href="/#impressum">Impressum</a>
+          <a href="/#datenschutz">Datenschutz</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
