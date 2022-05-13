@@ -30,7 +30,7 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>/home/patrick/Documents/sfr02.de/_site</Left>
+            <Left>/home/patrick/git/sfr02.de/_site</Left>
             <Right>ftp://w0074519@sfr02.de|pass64=aW5zZXJ0IHBhc3N3b3JkIGhlcmU=</Right>
         </Pair>
     </FolderPairs>
