@@ -1,0 +1,142 @@
+---
+layout: default
+---
+
+<div class="container">
+  <br />
+  <br />
+  <br />
+
+  <h2 class="post-title">
+    Hallencup der Sportfreunde 02 Reutlingen
+  </h2>
+  <p class="lead">am Sonntag, den 07.01.2024</p>
+  <div class="row pswp-gallery">
+
+
+  </div>
+  <br />
+  <br />
+  <br />
+</div>
+<script type="module">
+  const galleryDiv = document.querySelector('.pswp-gallery');
+  const indices_video = [9, 12, 39, 52, 68];
+  const indices_landscape = [1, 2, 5, 6, 14, 16, 20, 41, 55, 56, 58, 63, 64, 65]
+
+  for (let i = 1; i <= 68; i++) {
+    const a = document.createElement('a');
+    const path = `/img/20240107-hallencup/20240107-hallencup-${i.toString().padStart(2, '0')}`;
+    if (indices_video.includes(i)) {
+      a.href = `${path}.mp4`;
+      a.dataset.pswpType = "video";
+    } else {
+      a.href = `${path}.jpg`;
+    }
+    a.className = 'col-lg-2 gallery-item';
+    const width = 1536;
+    const height = 2048;
+    if (indices_landscape.includes(i)) {
+      a.dataset.pswpWidth = height;
+      a.dataset.pswpHeight = width;
+    } else {
+      a.dataset.pswpWidth = width;
+      a.dataset.pswpHeight = height;
+    }
+    a.target = '_blank';
+    const img = document.createElement('img');
+    img.className = 'img-responsive';
+    img.src = `${path}.jpg`;
+    img.alt = `Hallencup ${i.toString().padStart(2, '0')}`;
+    a.appendChild(img);
+    galleryDiv.appendChild(a);
+  }
+
+
+
+  import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+  import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
+  import PhotoSwipeVideoPlugin from "https://cdn.jsdelivr.net/gh/dimsemenov/photoswipe-video-plugin@5e32d6589df53df2887900bcd55267d72aee57a6/dist/photoswipe-video-plugin.esm.min.js"
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: galleryDiv,
+    children: 'a',
+    pswpModule: PhotoSwipe,
+  });
+
+  const videoPlugin = new PhotoSwipeVideoPlugin(lightbox, {
+    // options
+  });
+  lightbox.init();
+</script>
+
+
+<!-- 20240107-hallencup-01.jpeg
+20240107-hallencup-02.jpeg
+20240107-hallencup-03.jpeg
+20240107-hallencup-04.jpeg
+20240107-hallencup-05.jpeg
+20240107-hallencup-06.jpeg
+20240107-hallencup-07.jpeg
+20240107-hallencup-08.jpeg
+20240107-hallencup-09.mp4
+20240107-hallencup-10.jpeg
+20240107-hallencup-11.jpeg
+20240107-hallencup-12.mp4
+20240107-hallencup-13.jpeg
+20240107-hallencup-14.jpeg
+20240107-hallencup-15.jpeg
+20240107-hallencup-16.jpeg
+20240107-hallencup-17.jpeg
+20240107-hallencup-18.jpeg
+20240107-hallencup-19.jpeg
+20240107-hallencup-20.jpeg
+20240107-hallencup-21.jpeg
+20240107-hallencup-22.jpeg
+20240107-hallencup-23.jpeg
+20240107-hallencup-24.mp4
+20240107-hallencup-25.jpeg
+20240107-hallencup-26.jpeg
+20240107-hallencup-27.jpeg
+20240107-hallencup-28.jpeg
+20240107-hallencup-29.jpeg
+20240107-hallencup-30.jpeg
+20240107-hallencup-31.jpeg
+20240107-hallencup-32.jpeg
+20240107-hallencup-33.jpeg
+20240107-hallencup-34.jpeg
+20240107-hallencup-35.jpeg
+20240107-hallencup-36.jpeg
+20240107-hallencup-37.jpeg
+20240107-hallencup-38.jpeg
+20240107-hallencup-39.mp4
+20240107-hallencup-40.jpeg
+20240107-hallencup-41.jpeg
+20240107-hallencup-42.jpeg
+20240107-hallencup-43.jpeg
+20240107-hallencup-44.jpeg
+20240107-hallencup-45.jpeg
+20240107-hallencup-46.jpeg
+20240107-hallencup-47.jpeg
+20240107-hallencup-48.jpeg
+20240107-hallencup-49.jpeg
+20240107-hallencup-50.jpeg
+20240107-hallencup-51.jpeg
+20240107-hallencup-52.mp4
+20240107-hallencup-53.jpeg
+20240107-hallencup-54.jpeg
+20240107-hallencup-55.jpeg
+20240107-hallencup-56.jpeg
+20240107-hallencup-57.jpeg
+20240107-hallencup-58.jpeg
+20240107-hallencup-59.jpeg
+20240107-hallencup-60.jpeg
+20240107-hallencup-61.jpeg
+20240107-hallencup-62.jpeg
+20240107-hallencup-63.jpeg
+20240107-hallencup-64.jpeg
+20240107-hallencup-65.jpeg
+20240107-hallencup-66.jpeg
+20240107-hallencup-67.jpeg
+20240107-hallencup-68.mp4
+ -->

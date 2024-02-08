@@ -51,6 +51,19 @@
 
     <!-- Skin Color -->
     <link rel="stylesheet" href="/css/colors/blue.css" id="color-skins" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css">
+    <style>
+      /* For photoswipe */
+      .gallery-item {
+        padding: 0;
+      }
+      .gallery-item > img {
+        padding: 1rem;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     {{content}}
