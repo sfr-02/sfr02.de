@@ -7,33 +7,30 @@ layout: default
   <br />
   <br />
 
-  <h2 class="post-title">
-    Hallencup der Sportfreunde 02 Reutlingen
-  </h2>
+  <h2 class="post-title">Hallencup der Sportfreunde 02 Reutlingen</h2>
   <p class="lead">am Sonntag, den 07.01.2024</p>
-  <div class="row pswp-gallery">
-
-
-  </div>
+  <div class="row pswp-gallery"></div>
   <br />
   <br />
   <br />
 </div>
 <script type="module">
-  const galleryDiv = document.querySelector('.pswp-gallery');
+  const galleryDiv = document.querySelector(".pswp-gallery");
   const indices_video = [9, 12, 39, 52, 68];
-  const indices_landscape = [1, 2, 5, 6, 14, 16, 20, 41, 55, 56, 58, 63, 64, 65]
+  const indices_landscape = [
+    1, 2, 5, 6, 14, 16, 20, 41, 55, 56, 58, 63, 64, 65,
+  ];
 
   for (let i = 1; i <= 68; i++) {
-    const a = document.createElement('a');
-    const path = `/img/20240107-hallencup/20240107-hallencup-${i.toString().padStart(2, '0')}`;
+    const a = document.createElement("a");
+    const path = `/img/20240107-hallencup/20240107-hallencup-${i.toString().padStart(2, "0")}`;
     if (indices_video.includes(i)) {
       a.href = `${path}.mp4`;
       a.dataset.pswpType = "video";
     } else {
       a.href = `${path}.jpg`;
     }
-    a.className = 'col-lg-2 gallery-item';
+    a.className = "col-lg-2 gallery-item";
     const width = 1536;
     const height = 2048;
     if (indices_landscape.includes(i)) {
@@ -43,24 +40,22 @@ layout: default
       a.dataset.pswpWidth = width;
       a.dataset.pswpHeight = height;
     }
-    a.target = '_blank';
-    const img = document.createElement('img');
-    img.className = 'img-responsive';
+    a.target = "_blank";
+    const img = document.createElement("img");
+    img.className = "img-responsive";
     img.src = `${path}.jpg`;
-    img.alt = `Hallencup ${i.toString().padStart(2, '0')}`;
+    img.alt = `Hallencup ${i.toString().padStart(2, "0")}`;
     a.appendChild(img);
     galleryDiv.appendChild(a);
   }
 
-
-
-  import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
-  import PhotoSwipe from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js';
-  import PhotoSwipeVideoPlugin from "https://cdn.jsdelivr.net/gh/dimsemenov/photoswipe-video-plugin@5e32d6589df53df2887900bcd55267d72aee57a6/dist/photoswipe-video-plugin.esm.min.js"
+  import PhotoSwipeLightbox from "https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js";
+  import PhotoSwipe from "https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js";
+  import PhotoSwipeVideoPlugin from "https://cdn.jsdelivr.net/gh/dimsemenov/photoswipe-video-plugin@5e32d6589df53df2887900bcd55267d72aee57a6/dist/photoswipe-video-plugin.esm.min.js";
 
   const lightbox = new PhotoSwipeLightbox({
     gallery: galleryDiv,
-    children: 'a',
+    children: "a",
     pswpModule: PhotoSwipe,
   });
 
@@ -69,7 +64,6 @@ layout: default
   });
   lightbox.init();
 </script>
-
 
 <!-- 20240107-hallencup-01.jpeg
 20240107-hallencup-02.jpeg

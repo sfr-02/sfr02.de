@@ -186,7 +186,9 @@ body {
 
 .cbp-l-caption-text {
   /* @editable properties */
-  font: 400 14px "Open Sans", sans-serif;
+  font:
+    400 14px "Open Sans",
+    sans-serif;
   color: #fff;
   letter-spacing: 3px;
 }
@@ -879,17 +881,23 @@ body {
 
 .cbp-animation-fadeOut .cbp-item {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.6s ease-in-out 0.2s,
+  -webkit-transition:
+    -webkit-transform 0.6s ease-in-out 0.2s,
     opacity 0.6s ease-in-out 0.2s;
-  transition: transform 0.6s ease-in-out 0.2s, opacity 0.6s ease-in-out 0.2s;
+  transition:
+    transform 0.6s ease-in-out 0.2s,
+    opacity 0.6s ease-in-out 0.2s;
 }
 
 /* items that will be hidden */
 .cbp-animation-fadeOut .cbp-item-hidden {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.6s ease-in-out 0s,
+  -webkit-transition:
+    -webkit-transform 0.6s ease-in-out 0s,
     opacity 0.4s ease-in-out 0s;
-  transition: transform 0.6s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
+  transition:
+    transform 0.6s ease-in-out 0s,
+    opacity 0.4s ease-in-out 0s;
 }
 /*  END - Animation options for `fadeOut` filter. Change them carefully */
 
@@ -904,17 +912,23 @@ body {
 
 .cbp-animation-quicksand .cbp-item {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.6s ease-in-out 0.2s,
+  -webkit-transition:
+    -webkit-transform 0.6s ease-in-out 0.2s,
     opacity 0.6s ease-in-out 0.2s;
-  transition: transform 0.6s ease-in-out 0.2s, opacity 0.6s ease-in-out 0.2s;
+  transition:
+    transform 0.6s ease-in-out 0.2s,
+    opacity 0.6s ease-in-out 0.2s;
 }
 
 /* items that will be hidden */
 .cbp-animation-quicksand .cbp-item-hidden {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.6s ease-in-out 0s,
+  -webkit-transition:
+    -webkit-transform 0.6s ease-in-out 0s,
     opacity 0.4s ease-in-out 0s;
-  transition: transform 0.6s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
+  transition:
+    transform 0.6s ease-in-out 0s,
+    opacity 0.4s ease-in-out 0s;
 }
 /*  END - Animation options for `quicksand` filter. Change them carefully */
 
@@ -929,15 +943,23 @@ body {
 
 .cbp-animation-skew .cbp-item {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.3s ease-in, opacity 0.3s ease-in;
-  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  -webkit-transition:
+    -webkit-transform 0.3s ease-in,
+    opacity 0.3s ease-in;
+  transition:
+    transform 0.3s ease-in,
+    opacity 0.3s ease-in;
 }
 
 /* items that will be hidden */
 .cbp-animation-skew .cbp-item-hidden {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.3s ease-in 0s, opacity 0.3s ease-in 0s;
-  transition: transform 0.3s ease-in 0s, opacity 0.3s ease-in 0s;
+  -webkit-transition:
+    -webkit-transform 0.3s ease-in 0s,
+    opacity 0.3s ease-in 0s;
+  transition:
+    transform 0.3s ease-in 0s,
+    opacity 0.3s ease-in 0s;
 }
 /*  END - Animation options for `skew` filter. Change them carefully */
 
@@ -952,9 +974,12 @@ body {
 
 .cbp-animation-boxShadow .cbp-item {
   /* @editable properties */
-  -webkit-transition: -webkit-transform 0.6s ease-in-out,
+  -webkit-transition:
+    -webkit-transform 0.6s ease-in-out,
     opacity 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
 }
 
 .cbp-animation-boxShadow .cbp-item .cbp-animation-boxShadowMask {
@@ -1002,8 +1027,12 @@ body {
 
 .cbp-animation-bounceLeft .cbp-wrapper {
   /* @editable properties */
-  -webkit-transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out;
-  transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out;
+  -webkit-transition:
+    opacity 0.8s ease-in-out,
+    left 0.8s ease-in-out;
+  transition:
+    opacity 0.8s ease-in-out,
+    left 0.8s ease-in-out;
 }
 
 .cbp-animation-bounceLeft .cbp-item {
@@ -1036,8 +1065,12 @@ body {
 
 .cbp-animation-bounceTop .cbp-wrapper {
   /* @editable properties */
-  -webkit-transition: opacity 0.6s ease-in-out, top 0.6s ease-in-out;
-  transition: opacity 0.6s ease-in-out, top 0.6s ease-in-out;
+  -webkit-transition:
+    opacity 0.6s ease-in-out,
+    top 0.6s ease-in-out;
+  transition:
+    opacity 0.6s ease-in-out,
+    top 0.6s ease-in-out;
 }
 
 .cbp-animation-bounceTop .cbp-item {
@@ -1070,8 +1103,12 @@ body {
 
 .cbp-animation-bounceBottom .cbp-wrapper {
   /* @editable properties */
-  -webkit-transition: opacity 0.6s ease-in-out, top 0.6s ease-in-out;
-  transition: opacity 0.6s ease-in-out, top 0.6s ease-in-out;
+  -webkit-transition:
+    opacity 0.6s ease-in-out,
+    top 0.6s ease-in-out;
+  transition:
+    opacity 0.6s ease-in-out,
+    top 0.6s ease-in-out;
 }
 
 .cbp-animation-bounceBottom .cbp-item {
@@ -1106,8 +1143,12 @@ body {
   z-index: 2;
 
   /* @editable properties */
-  -webkit-transition: opacity 0.6s ease-in-out, left 0.6s ease-in-out;
-  transition: opacity 0.6s ease-in-out, left 0.6s ease-in-out;
+  -webkit-transition:
+    opacity 0.6s ease-in-out,
+    left 0.6s ease-in-out;
+  transition:
+    opacity 0.6s ease-in-out,
+    left 0.6s ease-in-out;
 }
 
 .cbp-animation-moveLeft .cbp-wrapper.no-trans {
@@ -2514,8 +2555,12 @@ body {
 
 .cbp-animation-fadeOutTop .cbp-wrapper {
   /* @editable properties */
-  -webkit-transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+  -webkit-transition:
+    opacity 0.3s ease-in-out,
+    top 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    top 0.3s ease-in-out;
 }
 
 .cbp-animation-fadeOutTop .cbp-item {
@@ -2544,8 +2589,12 @@ body {
 
 .cbp-animation-sequentially.cbp-no-transition .cbp-item {
   /* @editable properties */
-  -webkit-transition: opacity 0.5s ease, top 0.5s ease !important;
-  transition: opacity 0.5s ease, top 0.5s ease !important;
+  -webkit-transition:
+    opacity 0.5s ease,
+    top 0.5s ease !important;
+  transition:
+    opacity 0.5s ease,
+    top 0.5s ease !important;
 }
 /*  END - Animation options for `sequentially` filter. Change them carefully */
 
@@ -3282,8 +3331,12 @@ body {
   right: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   opacity: 0;
-  -webkit-transition: opacity 0.25s ease, bottom 0.25s ease;
-  transition: opacity 0.25s ease, bottom 0.25s ease;
+  -webkit-transition:
+    opacity 0.25s ease,
+    bottom 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    bottom 0.25s ease;
 }
 
 .cbp-l-filters-button .cbp-filter-counter:before {
@@ -3335,7 +3388,9 @@ body {
 
 .cbp-l-filters-dropdownHeader {
   /* @editable properties */
-  font: 12px/38px "Open Sans", sans-serif;
+  font:
+    12px/38px "Open Sans",
+    sans-serif;
   padding: 0 17px;
   color: #fff;
   cursor: pointer;
@@ -3378,7 +3433,9 @@ body {
   color: #9fbce7;
   width: 100%;
   text-align: left;
-  font: 12px/40px "Open Sans", sans-serif;
+  font:
+    12px/40px "Open Sans",
+    sans-serif;
   margin: 0;
   padding: 0 17px;
   cursor: pointer;
@@ -3411,7 +3468,9 @@ body {
   background-color: #fff;
   border: 1px solid #cdcdcd;
   cursor: pointer;
-  font: 400 12px/30px "Open Sans", sans-serif;
+  font:
+    400 12px/30px "Open Sans",
+    sans-serif;
   padding: 0 13px;
   position: relative;
   overflow: visible;
@@ -3456,7 +3515,9 @@ body {
   /* @editable properties */
   color: #5a5a5a;
   cursor: pointer;
-  font: 400 13px "Open Sans", sans-serif;
+  font:
+    400 13px "Open Sans",
+    sans-serif;
   padding: 0 12px;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -3540,7 +3601,9 @@ body {
   background-color: transparent;
   color: #8b8b8b;
   cursor: pointer;
-  font: 400 11px "Open Sans", sans-serif;
+  font:
+    400 11px "Open Sans",
+    sans-serif;
   padding: 7px 12px;
   position: relative;
   overflow: visible;
@@ -3583,8 +3646,12 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   opacity: 0;
 
-  -webkit-transition: opacity 0.25s ease, bottom 0.25s ease;
-  transition: opacity 0.25s ease, bottom 0.25s ease;
+  -webkit-transition:
+    opacity 0.25s ease,
+    bottom 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    bottom 0.25s ease;
 }
 
 .cbp-l-filters-alignRight .cbp-filter-counter:before {
@@ -3629,7 +3696,9 @@ body {
   background-color: transparent;
   color: #585252;
   cursor: pointer;
-  font: 400 12px/35px "Open Sans", sans-serif;
+  font:
+    400 12px/35px "Open Sans",
+    sans-serif;
   padding: 0 18px;
   position: relative;
   overflow: visible;
@@ -3837,7 +3906,9 @@ body {
 
 .cbp-l-grid-team-name {
   /* @editable properties */
-  font: 400 17px "Open Sans", sans-serif;
+  font:
+    400 17px "Open Sans",
+    sans-serif;
   color: #456297;
   text-decoration: none;
   display: block;
@@ -3852,7 +3923,9 @@ body {
 
 .cbp-l-grid-team-position {
   /* @editable properties */
-  font: italic 400 13px "Open Sans", sans-serif;
+  font:
+    italic 400 13px "Open Sans",
+    sans-serif;
   color: #888888;
   text-align: center;
 }
@@ -3860,7 +3933,9 @@ body {
 /* @editable properties */
 @media only screen and (max-width: 799px) {
   .cbp-l-grid-team-desc {
-    font: 400 11px/14px "Open Sans", sans-serif;
+    font:
+      400 11px/14px "Open Sans",
+      sans-serif;
     margin-top: 5px;
   }
 }
@@ -4012,7 +4087,9 @@ body {
 
 .cbp-l-grid-blog-title {
   /* @editable properties */
-  font: 400 18px/28px "Open Sans", sans-serif;
+  font:
+    400 18px/28px "Open Sans",
+    sans-serif;
   color: #444;
   display: block;
   clear: both;
@@ -4026,14 +4103,18 @@ body {
 
 .cbp-l-grid-blog-date {
   /* @editable properties */
-  font: 400 12px/18px "Open Sans", sans-serif;
+  font:
+    400 12px/18px "Open Sans",
+    sans-serif;
   float: left;
   color: #787878;
 }
 
 .cbp-l-grid-blog-comments {
   /* @editable properties */
-  font: 400 12px/18px "Open Sans", sans-serif;
+  font:
+    400 12px/18px "Open Sans",
+    sans-serif;
   float: left;
   color: #3c6fbb;
   text-decoration: none;
@@ -4046,7 +4127,9 @@ body {
 
 .cbp-l-grid-blog-desc {
   /* @editable properties */
-  font: 400 13px/19px "Open Sans", sans-serif;
+  font:
+    400 13px/19px "Open Sans",
+    sans-serif;
   clear: both;
   color: #9b9b9b;
   padding-top: 15px;
@@ -4056,7 +4139,9 @@ body {
   /* @editable properties */
   float: left;
   margin: 0px 8px;
-  font: 13px/16px "Open Sans", sans-serif;
+  font:
+    13px/16px "Open Sans",
+    sans-serif;
   color: #787878;
 }
 /*  END - layout gid blog */
@@ -4106,7 +4191,9 @@ body {
 
 .cbp-l-loadMore-text-link {
   /* @editable properties */
-  font: 400 16px "Open Sans", sans-serif;
+  font:
+    400 16px "Open Sans",
+    sans-serif;
   color: #5d5d5d;
   text-decoration: none;
   cursor: default;
@@ -4177,8 +4264,12 @@ body {
   left: 25px;
   margin: auto;
 
-  -webkit-transition: opacity 0.4s ease, left 0.4s ease;
-  transition: opacity 0.4s ease, left 0.4s ease;
+  -webkit-transition:
+    opacity 0.4s ease,
+    left 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    left 0.4s ease;
 }
 
 .cbp-slider .cbp-slider-arrowPrev:hover {
@@ -4197,8 +4288,12 @@ body {
   right: 25px;
   margin: auto;
 
-  -webkit-transition: opacity 0.4s ease, right 0.4s ease;
-  transition: opacity 0.4s ease, right 0.4s ease;
+  -webkit-transition:
+    opacity 0.4s ease,
+    right 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    right 0.4s ease;
 }
 
 .cbp-slider .cbp-slider-arrowNext:hover {

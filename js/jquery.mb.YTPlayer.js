@@ -71,38 +71,38 @@ function onYouTubePlayerAPIReady() {
           (jQuery.browser.name = "Chrome"),
           (jQuery.browser.fullVersion = nAgt.substring(verOffset + 7)))
         : -1 != (verOffset = nAgt.indexOf("Safari"))
-        ? ((jQuery.browser.webkit = !0),
-          (jQuery.browser.safari = !0),
-          (jQuery.browser.name = "Safari"),
-          (jQuery.browser.fullVersion = nAgt.substring(verOffset + 7)),
-          -1 != (verOffset = nAgt.indexOf("Version")) &&
-            (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
-        : -1 != (verOffset = nAgt.indexOf("AppleWebkit"))
-        ? ((jQuery.browser.webkit = !0),
-          (jQuery.browser.name = "Safari"),
-          (jQuery.browser.fullVersion = nAgt.substring(verOffset + 7)),
-          -1 != (verOffset = nAgt.indexOf("Version")) &&
-            (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
-        : -1 != (verOffset = nAgt.indexOf("Firefox"))
-        ? ((jQuery.browser.mozilla = !0),
-          (jQuery.browser.name = "Firefox"),
-          (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
-        : (nameOffset = nAgt.lastIndexOf(" ") + 1) <
-            (verOffset = nAgt.lastIndexOf("/")) &&
-          ((jQuery.browser.name = nAgt.substring(nameOffset, verOffset)),
-          (jQuery.browser.fullVersion = nAgt.substring(verOffset + 1)),
-          jQuery.browser.name.toLowerCase() ==
-            jQuery.browser.name.toUpperCase() &&
-            (jQuery.browser.name = navigator.appName));
+          ? ((jQuery.browser.webkit = !0),
+            (jQuery.browser.safari = !0),
+            (jQuery.browser.name = "Safari"),
+            (jQuery.browser.fullVersion = nAgt.substring(verOffset + 7)),
+            -1 != (verOffset = nAgt.indexOf("Version")) &&
+              (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
+          : -1 != (verOffset = nAgt.indexOf("AppleWebkit"))
+            ? ((jQuery.browser.webkit = !0),
+              (jQuery.browser.name = "Safari"),
+              (jQuery.browser.fullVersion = nAgt.substring(verOffset + 7)),
+              -1 != (verOffset = nAgt.indexOf("Version")) &&
+                (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
+            : -1 != (verOffset = nAgt.indexOf("Firefox"))
+              ? ((jQuery.browser.mozilla = !0),
+                (jQuery.browser.name = "Firefox"),
+                (jQuery.browser.fullVersion = nAgt.substring(verOffset + 8)))
+              : (nameOffset = nAgt.lastIndexOf(" ") + 1) <
+                  (verOffset = nAgt.lastIndexOf("/")) &&
+                ((jQuery.browser.name = nAgt.substring(nameOffset, verOffset)),
+                (jQuery.browser.fullVersion = nAgt.substring(verOffset + 1)),
+                jQuery.browser.name.toLowerCase() ==
+                  jQuery.browser.name.toUpperCase() &&
+                  (jQuery.browser.name = navigator.appName));
     -1 != (ix = jQuery.browser.fullVersion.indexOf(";")) &&
       (jQuery.browser.fullVersion = jQuery.browser.fullVersion.substring(
         0,
-        ix
+        ix,
       ));
     -1 != (ix = jQuery.browser.fullVersion.indexOf(" ")) &&
       (jQuery.browser.fullVersion = jQuery.browser.fullVersion.substring(
         0,
-        ix
+        ix,
       ));
     jQuery.browser.majorVersion = parseInt("" + jQuery.browser.fullVersion, 10);
     isNaN(jQuery.browser.majorVersion) &&
@@ -207,10 +207,11 @@ function onYouTubePlayerAPIReady() {
           jQuery.browser.webkit
             ? ((d = "-webkit-"), (q = "webkitTransitionEnd"))
             : jQuery.browser.mozilla
-            ? ((d = "-moz-"), (q = "transitionend"))
-            : jQuery.browser.opera
-            ? ((d = "-o-"), (q = "otransitionend"))
-            : jQuery.browser.msie && ((d = "-ms-"), (q = "msTransitionEnd"));
+              ? ((d = "-moz-"), (q = "transitionend"))
+              : jQuery.browser.opera
+                ? ((d = "-o-"), (q = "otransitionend"))
+                : jQuery.browser.msie &&
+                  ((d = "-ms-"), (q = "msTransitionEnd"));
           l = [];
           for (c in a) {
             b = c;
@@ -318,15 +319,18 @@ function onYouTubePlayerAPIReady() {
             k.one(q + "." + e.id, s);
             k.css(n);
           }, 1);
-          e.timeout = setTimeout(function () {
-            k.called || !h
-              ? ((k.called = !1), (e.CSSAIsRunning = !1))
-              : (k.css(d + "transition", ""),
-                h(k),
-                (e.CSSAIsRunning = !1),
-                "function" == typeof e.CSSqueue &&
-                  (e.CSSqueue(), (e.CSSqueue = null)));
-          }, g + p + 100);
+          e.timeout = setTimeout(
+            function () {
+              k.called || !h
+                ? ((k.called = !1), (e.CSSAIsRunning = !1))
+                : (k.css(d + "transition", ""),
+                  h(k),
+                  (e.CSSAIsRunning = !1),
+                  "function" == typeof e.CSSqueue &&
+                    (e.CSSqueue(), (e.CSSqueue = null)));
+            },
+            g + p + 100,
+          );
         } else {
           for (var c in a)
             "transform" === c && delete a[c],
@@ -420,7 +424,7 @@ function onYouTubePlayerAPIReady() {
           YTPlayer.opt,
           jQuery.mbYTPlayer.defaults,
           options,
-          property
+          property,
         );
 
         var canGoFullscreen = !(
@@ -441,8 +445,8 @@ function onYouTubePlayerAPIReady() {
         var videoID = this.opt.videoURL
           ? getYTPVideoID(this.opt.videoURL)
           : $YTPlayer.attr("href")
-          ? getYTPVideoID($YTPlayer.attr("href"))
-          : false;
+            ? getYTPVideoID($YTPlayer.attr("href"))
+            : false;
         YTPlayer.videoID = videoID;
 
         YTPlayer.opt.showAnnotations = YTPlayer.opt.showAnnotations ? "0" : "3";
@@ -563,7 +567,8 @@ function onYouTubePlayerAPIReady() {
             webkitTransform: "translateZ(0)",
           });
           $YTPlayer.hide();
-        } else if (YTPlayer.opt.containment.css("position") == "static") YTPlayer.opt.containment.css({ position: "relative" });
+        } else if (YTPlayer.opt.containment.css("position") == "static")
+          YTPlayer.opt.containment.css({ position: "relative" });
 
         YTPlayer.opt.containment.prepend(wrapper);
         YTPlayer.wrapper = wrapper;
@@ -719,7 +724,7 @@ function onYouTubePlayerAPIReady() {
                         {
                           opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity,
                         },
-                        2000
+                        2000,
                       );
 
                       jQuery.mbYTPlayer.checkForState(YTPlayer);
@@ -840,7 +845,7 @@ function onYouTubePlayerAPIReady() {
                         "event",
                         "YTPlayer",
                         "play",
-                        YTPlayer.title || YTPlayer.videoID.toString()
+                        YTPlayer.title || YTPlayer.videoID.toString(),
                       );
                   }
                   //------------------------------------------------------------------ paused
@@ -860,7 +865,7 @@ function onYouTubePlayerAPIReady() {
                 onError: function (err) {
                   if (err.data == 150) {
                     console.log(
-                      "Embedding this video is restricted by Youtube."
+                      "Embedding this video is restricted by Youtube.",
                     );
                     if (YTPlayer.isPlayList) jQuery(YTPlayer).playNext();
                   }
@@ -919,7 +924,7 @@ function onYouTubePlayerAPIReady() {
               }
             }
             jQuery(YTPlayer).trigger("YTPChanged");
-          }
+          },
         );
 
         setTimeout(function () {
@@ -1020,10 +1025,10 @@ function onYouTubePlayerAPIReady() {
             encodeURI(
               jQuery.mbYTPlayer.locationProtocol +
                 "//www.youtube.com/v/" +
-                YTPlayer.videoID
+                YTPlayer.videoID,
             ),
             1,
-            YTPlayer.opt.quality
+            YTPlayer.opt.quality,
           );
 
         jQuery(YTPlayer).playYTP();
@@ -1031,7 +1036,7 @@ function onYouTubePlayerAPIReady() {
         jQuery(YTPlayer).one("YTPStart", function () {
           YTPlayer.wrapper.CSSAnimate(
             { opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity },
-            1000
+            1000,
           );
           jQuery(YTPlayer.playerEl).CSSAnimate({ opacity: 1 }, timer);
 
@@ -1100,8 +1105,8 @@ function onYouTubePlayerAPIReady() {
         var fullscreenchange = jQuery.browser.mozilla
           ? "mozfullscreenchange"
           : jQuery.browser.webkit
-          ? "webkitfullscreenchange"
-          : "fullscreenchange";
+            ? "webkitfullscreenchange"
+            : "fullscreenchange";
         jQuery(document)
           .off(fullscreenchange)
           .on(fullscreenchange, function () {
@@ -1145,7 +1150,7 @@ function onYouTubePlayerAPIReady() {
 
             YTPlayer.player.seekTo(
               YTPlayer.player.getCurrentTime() + 0.1,
-              true
+              true,
             );
           }, 500);
         } else
@@ -1211,7 +1216,7 @@ function onYouTubePlayerAPIReady() {
 
       YTPlayer.wrapper.CSSAnimate(
         { opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity },
-        2000
+        2000,
       );
       jQuery(YTPlayer).on("YTPStart", function () {
         jQuery(YTPlayer).css("background-image", "none");
@@ -1335,7 +1340,7 @@ function onYouTubePlayerAPIReady() {
       var buttonBar = jQuery("<div/>").addClass("buttonBar");
 
       var playpause = jQuery(
-        "<span>" + jQuery.mbYTPlayer.controls.play + "</span>"
+        "<span>" + jQuery.mbYTPlayer.controls.play + "</span>",
       )
         .addClass("mb_YTVPPlaypause ytpicon")
         .click(function () {
@@ -1345,7 +1350,7 @@ function onYouTubePlayerAPIReady() {
         });
 
       var MuteUnmute = jQuery(
-        "<span>" + jQuery.mbYTPlayer.controls.mute + "</span>"
+        "<span>" + jQuery.mbYTPlayer.controls.mute + "</span>",
       )
         .addClass("mb_YTVPMuteUnmute ytpicon")
         .click(function () {
@@ -1445,7 +1450,7 @@ function onYouTubePlayerAPIReady() {
             .html(
               jQuery.mbYTPlayer.formatTime(prog.currentTime) +
                 " / " +
-                jQuery.mbYTPlayer.formatTime(prog.totalTime)
+                jQuery.mbYTPlayer.formatTime(prog.totalTime),
             );
         } else {
           //					clearInterval(YTPlayer.getState);

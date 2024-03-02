@@ -23,12 +23,12 @@
         template: "{{date}} - {{tweet}}",
         apiPath: "api/tweet.php",
       },
-      options
+      options,
     );
 
     if (settings.list && !settings.username) {
       $.error(
-        "If you want to fetch tweets from a list, you must define the username of the list owner."
+        "If you want to fetch tweets from a list, you must define the username of the list owner.",
       );
     }
 
@@ -43,15 +43,15 @@
       var twit = tweet
         .replace(
           /(https?:\/\/([-\w\.]+)+(:\d+)?(\/([\w\/_\.]*(\?\S+)?)?)?)/gi,
-          '<a href="$1" target="_blank" title="Visit this link">$1</a>'
+          '<a href="$1" target="_blank" title="Visit this link">$1</a>',
         )
         .replace(
           /#([a-zA-Z0-9_]+)/g,
-          '<a href="http://twitter.com/search?q=%23$1&amp;src=hash" target="_blank" title="Search for #$1">#$1</a>'
+          '<a href="http://twitter.com/search?q=%23$1&amp;src=hash" target="_blank" title="Search for #$1">#$1</a>',
         )
         .replace(
           /@([a-zA-Z0-9_]+)/g,
-          '<a href="http://twitter.com/$1" target="_blank" title="$1 on Twitter">@$1</a>'
+          '<a href="http://twitter.com/$1" target="_blank" title="$1 on Twitter">@$1</a>',
         );
 
       return twit;
@@ -67,8 +67,8 @@
       var time = twt_date.split(" ");
       twt_date = new Date(
         Date.parse(
-          time[1] + " " + time[2] + ", " + time[5] + " " + time[3] + " UTC"
-        )
+          time[1] + " " + time[2] + ", " + time[5] + " " + time[3] + " UTC",
+        ),
       );
 
       var months = [
@@ -125,7 +125,7 @@
       for (var i = 0, len = temp_variables.length; i < len; i++) {
         temp = temp.replace(
           new RegExp("{{" + temp_variables[i] + "}}", "gi"),
-          data[temp_variables[i]]
+          data[temp_variables[i]],
         );
       }
 
@@ -169,7 +169,7 @@
                     "RT @" +
                       tweet.user.screen_name +
                       ": " +
-                      tweet.retweeted_status.text
+                      tweet.retweeted_status.text,
                   )
                 : linking(tweet.text),
               avatar: '<img src="' + tweet.user.profile_image_url + '" />',
@@ -189,7 +189,7 @@
             callback();
           }
         });
-      }
+      },
     );
   };
 })(jQuery);

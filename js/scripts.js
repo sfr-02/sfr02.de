@@ -116,7 +116,7 @@ $(function () {
           scrollTop: $($anchor).offset().top - 0,
         },
         800,
-        "swing"
+        "swing",
       );
     event.preventDefault();
   });
@@ -189,11 +189,11 @@ $(".skills-col").waypoint(
           {
             width: jQuery(this).attr("data-percent"),
           },
-          2000
+          2000,
         );
     });
   },
-  { offset: "100%" }
+  { offset: "100%" },
 );
 
 /* ==============================================
@@ -276,7 +276,7 @@ jQuery(document).ready(function () {
           });
           $("#submit").removeAttr("disabled");
           if (data.match("success") != null) $("#contactform").slideUp("slow");
-        }
+        },
       );
     });
 
@@ -333,7 +333,7 @@ $(".home-fullscreen-slider").backstretch(
   {
     fade: 750,
     duration: 4000,
-  }
+  },
 );
 
 /* ==============================================
@@ -430,7 +430,7 @@ Portfolio
   // activate counters
   gridContainer.cubeportfolio(
     "showCounter",
-    filtersContainer.find(".cbp-filter-item")
+    filtersContainer.find(".cbp-filter-item"),
   );
 
   // add listener for load more click
@@ -500,7 +500,7 @@ $(function () {
         {
           scrollTop: $($anchor.attr("href")).offset().top - 70,
         },
-        1000
+        1000,
       );
     event.preventDefault();
   });
@@ -520,7 +520,7 @@ $(function () {
         {
           scrollTop: $($anchor.attr("href")).offset().top - 70,
         },
-        1000
+        1000,
       );
     event.preventDefault();
   });

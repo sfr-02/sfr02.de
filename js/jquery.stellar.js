@@ -118,7 +118,7 @@
     prefixedTransform = vendorPrefix("transform"),
     supportsBackgroundPositionXY =
       $("<div />", { style: "background:#fff" }).css(
-        "background-position-x"
+        "background-position-x",
       ) !== undefined,
     setBackgroundPosition = supportsBackgroundPositionXY
       ? function ($elem, x, y) {
@@ -186,9 +186,9 @@
         this.options.viewportElement !== undefined
           ? $(this.options.viewportElement)
           : this.$scrollElement[0] === window ||
-            this.options.scrollProperty === "scroll"
-          ? this.$scrollElement
-          : this.$scrollElement.parent();
+              this.options.scrollProperty === "scroll"
+            ? this.$scrollElement
+            : this.$scrollElement.parent();
     },
     _defineGetters: function () {
       var self = this,
@@ -383,16 +383,16 @@
           $this.data("stellar-horizontal-offset") !== undefined
             ? $this.data("stellar-horizontal-offset")
             : $offsetParent !== undefined &&
-              $offsetParent.data("stellar-horizontal-offset") !== undefined
-            ? $offsetParent.data("stellar-horizontal-offset")
-            : self.horizontalOffset;
+                $offsetParent.data("stellar-horizontal-offset") !== undefined
+              ? $offsetParent.data("stellar-horizontal-offset")
+              : self.horizontalOffset;
         verticalOffset =
           $this.data("stellar-vertical-offset") !== undefined
             ? $this.data("stellar-vertical-offset")
             : $offsetParent !== undefined &&
-              $offsetParent.data("stellar-vertical-offset") !== undefined
-            ? $offsetParent.data("stellar-vertical-offset")
-            : self.verticalOffset;
+                $offsetParent.data("stellar-vertical-offset") !== undefined
+              ? $offsetParent.data("stellar-vertical-offset")
+              : self.verticalOffset;
 
         // Add our object to the particles collection
         self.particles.push({
@@ -428,7 +428,7 @@
       if (!this.options.parallaxBackgrounds) return;
 
       $backgroundElements = this.$element.find(
-        "[data-stellar-background-ratio]"
+        "[data-stellar-background-ratio]",
       );
 
       if (this.$element.data("stellar-background-ratio")) {
@@ -467,7 +467,7 @@
           setBackgroundPosition(
             $this,
             $this.data("stellar-backgroundStartingLeft"),
-            $this.data("stellar-backgroundStartingTop")
+            $this.data("stellar-backgroundStartingTop"),
           );
         }
 
@@ -505,16 +505,16 @@
           $this.data("stellar-horizontal-offset") !== undefined
             ? $this.data("stellar-horizontal-offset")
             : $offsetParent !== undefined &&
-              $offsetParent.data("stellar-horizontal-offset") !== undefined
-            ? $offsetParent.data("stellar-horizontal-offset")
-            : self.horizontalOffset;
+                $offsetParent.data("stellar-horizontal-offset") !== undefined
+              ? $offsetParent.data("stellar-horizontal-offset")
+              : self.horizontalOffset;
         verticalOffset =
           $this.data("stellar-vertical-offset") !== undefined
             ? $this.data("stellar-vertical-offset")
             : $offsetParent !== undefined &&
-              $offsetParent.data("stellar-vertical-offset") !== undefined
-            ? $offsetParent.data("stellar-vertical-offset")
-            : self.verticalOffset;
+                $offsetParent.data("stellar-vertical-offset") !== undefined
+              ? $offsetParent.data("stellar-vertical-offset")
+              : self.verticalOffset;
 
         self.backgrounds.push({
           $element: $this,
@@ -525,12 +525,12 @@
           startingValueLeft: backgroundPosition[0],
           startingValueTop: backgroundPosition[1],
           startingBackgroundPositionLeft: isNaN(
-            parseInt(backgroundPosition[0], 10)
+            parseInt(backgroundPosition[0], 10),
           )
             ? 0
             : parseInt(backgroundPosition[0], 10),
           startingBackgroundPositionTop: isNaN(
-            parseInt(backgroundPosition[1], 10)
+            parseInt(backgroundPosition[1], 10),
           )
             ? 0
             : parseInt(backgroundPosition[1], 10),
@@ -560,7 +560,7 @@
           startingPositionLeft,
           startingPositionLeft,
           startingPositionTop,
-          startingPositionTop
+          startingPositionTop,
         );
 
         this.options.showElement(particle.$element);
@@ -581,7 +581,7 @@
         setBackgroundPosition(
           background.$element,
           background.startingValueLeft,
-          background.startingValueTop
+          background.startingValueTop,
         );
       }
     },
@@ -732,7 +732,7 @@
             newPositionLeft,
             particle.startingPositionLeft,
             newPositionTop,
-            particle.startingPositionTop
+            particle.startingPositionTop,
           );
         } else {
           if (!particle.isHidden) {
@@ -822,7 +822,7 @@
         ) {
           instance[options].apply(
             instance,
-            Array.prototype.slice.call(args, 1)
+            Array.prototype.slice.call(args, 1),
           );
         }
         if (options === "destroy") {
@@ -836,7 +836,7 @@
     var $window = $(window);
     return $window.stellar.apply(
       $window,
-      Array.prototype.slice.call(arguments, 0)
+      Array.prototype.slice.call(arguments, 0),
     );
   };
 

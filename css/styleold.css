@@ -460,7 +460,7 @@ h6 small {
   font-weight: 400;
   height: 100%;
   margin-top: 10px;
-  color: ;
+  color:;
 }
 
 .navbar-collapse {
@@ -1495,7 +1495,7 @@ p {
 #contact input,
 select {
   width: 100%;
-  max-width: ;
+  max-width:;
   padding: 12.9px;
   color: #444;
   background: #fff;
@@ -1525,14 +1525,14 @@ input[type="color"]:focus,
 }
 textarea {
   width: 100%;
-  max-width: ;
+  max-width:;
   height: 165px;
   padding: 13px;
   color: #444;
   background: #fff;
   border: 1px solid #f2f2f2;
   margin-top: 7px;
-  margin-left: ;
+  margin-left:;
   margin-right: 15px;
   -webkit-border-radius: 2px;
 }

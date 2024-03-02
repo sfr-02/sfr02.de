@@ -108,7 +108,7 @@ LiquidSlider.init = function (e, t) {
     n.$sliderWrap.width(
       n.$sliderId.outerWidth(true) +
         n.leftArrow.outerWidth(true) +
-        n.rightArrow.outerWidth(true)
+        n.rightArrow.outerWidth(true),
     );
   n.loaded = true;
   n.options.preload.call(n);
@@ -118,7 +118,7 @@ LiquidSlider.build = function () {
     t;
   if (e.$sliderId.parent().attr("class") !== "ls-wrapper") {
     e.$sliderId.wrap(
-      '<div id="' + e.$elem.attr("id") + '-wrapper" class="ls-wrapper"></div>'
+      '<div id="' + e.$elem.attr("id") + '-wrapper" class="ls-wrapper"></div>',
     );
   }
   e.$sliderWrap = jQuery(e.sliderId + "-wrapper");
@@ -159,10 +159,10 @@ LiquidSlider.build = function () {
   e.options.hideSideArrows && (e.options.continuous = false);
   if (e.options.continuous) {
     e.$panelContainer.prepend(
-      e.$panelContainer.children().last().clone().addClass("clone")
+      e.$panelContainer.children().last().clone().addClass("clone"),
     );
     e.$panelContainer.append(
-      e.$panelContainer.children().eq(1).clone().addClass("clone")
+      e.$panelContainer.children().eq(1).clone().addClass("clone"),
     );
   }
   var n = e.options.continuous ? 2 : 0;
@@ -283,7 +283,7 @@ LiquidSlider.hover = function () {
       e.options.hoverArrows &&
         e.hideShowArrows(e.options.fadeOutnDuration, true, false, true);
       e.options.pauseOnHover && e.options.autoSlide && e.startAutoSlide(true);
-    }
+    },
   );
 };
 LiquidSlider.events = function () {
@@ -419,7 +419,7 @@ LiquidSlider.callback = function (e, t) {
         "webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
         function () {
           e.call(n);
-        }
+        },
       );
     } else {
       setTimeout(function () {
@@ -534,7 +534,7 @@ LiquidSlider.transitionjQuery = function (e, t) {
           : n.options.slideEaseFunctionFallback,
         duration: n.options.slideEaseDuration,
         queue: false,
-      }
+      },
     );
   }
 };
@@ -632,7 +632,7 @@ LiquidSlider.addNavigation = function (e) {
             (e + 1) +
             '">' +
             jQuery(this).text() +
-            "</option>"
+            "</option>",
         );
     });
   }
@@ -648,7 +648,7 @@ LiquidSlider.addNavigation = function (e) {
           (n + 1) +
           '">' +
           t.getNavInsides(this) +
-          "</a></li>"
+          "</a></li>",
       );
     if (!t.options.includeTitle) jQuery(this).remove();
   });
@@ -670,8 +670,8 @@ LiquidSlider.alignNavigation = function () {
             .outerWidth(true) +
             parseInt(
               e.$sliderId.css("margin-" + e.options.dynamicTabsAlign),
-              10
-            )
+              10,
+            ),
         );
     }
     jQuery(e.$sliderWrap)
@@ -695,7 +695,7 @@ LiquidSlider.registerNav = function () {
   var e = this;
   e.$sliderWrap.find("[class^=ls-nav] li").on("click", function () {
     e.setNextPanel(
-      parseInt(jQuery(this).attr("class").split("tab")[1], 10) - 1
+      parseInt(jQuery(this).attr("class").split("tab")[1], 10) - 1,
     );
     return false;
   });
@@ -714,7 +714,7 @@ LiquidSlider.addArrows = function (e) {
       (e || "") +
       '"><a href="#">' +
       t.options.dynamicArrowLeftText +
-      "</a></div>"
+      "</a></div>",
   );
   t.$sliderId.after(
     '<div class="ls-nav-right' +
@@ -722,7 +722,7 @@ LiquidSlider.addArrows = function (e) {
       (e || "") +
       '"><a href="#">' +
       t.options.dynamicArrowRightText +
-      "</a></div>"
+      "</a></div>",
   );
   t.leftArrow = jQuery(t.sliderId + "-wrapper [class^=ls-nav-left]")
     .css("visibility", "hidden")
@@ -782,7 +782,7 @@ LiquidSlider.adjustHeight = function (e, t, n, r) {
         : i.options.slideEaseFunctionFallback,
       duration: r || i.options.heightEaseDuration,
       queue: false,
-    }
+    },
   );
 };
 LiquidSlider.autoSlide = function () {
@@ -820,15 +820,15 @@ LiquidSlider.startAutoSlide = function (e) {
 LiquidSlider.registerCrossLinks = function () {
   var e = this;
   e.crosslinks = jQuery(
-    "[data-liquidslider-ref*=" + e.sliderId.split("#")[1] + "]"
+    "[data-liquidslider-ref*=" + e.sliderId.split("#")[1] + "]",
   );
   e.crosslinks.on("click", function (t) {
     e.options.autoSlide && e.startAutoSlide(true);
     e.setNextPanel(
       e.getPanelNumber(
         jQuery(this).attr("href").split("#")[1],
-        e.options.panelTitleSelector
-      )
+        e.options.panelTitleSelector,
+      ),
     );
     t.preventDefault();
   });
@@ -873,11 +873,11 @@ LiquidSlider.makeResponsive = function () {
     });
   jQuery(e.sliderId + " .panel-container").css(
     "width",
-    100 * e.panelCountTotal + e.pSign
+    100 * e.panelCountTotal + e.pSign,
   );
   jQuery(e.sliderId + " .panel").css(
     "width",
-    100 / e.panelCountTotal + e.pSign
+    100 / e.panelCountTotal + e.pSign,
   );
   if (e.options.hideArrowsWhenMobile) {
     e.leftWrapperPadding = jQuery(e.sliderId + "-wrapper").css("padding-left");
@@ -933,11 +933,11 @@ LiquidSlider.responsiveEvents = function () {
       } else if (!e.options.dynamicArrowsGraphical) {
         e.leftArrow.css(
           "margin-" + e.options.dynamicTabsPosition,
-          e.navigation.css("height")
+          e.navigation.css("height"),
         );
         e.rightArrow.css(
           "margin-" + e.options.dynamicTabsPosition,
-          e.navigation.css("height")
+          e.navigation.css("height"),
         );
       }
     }

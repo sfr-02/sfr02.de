@@ -110,7 +110,7 @@
               ].join(""),
               function (a) {
                 c = a.offsetTop === 9;
-              }
+              },
             ),
         c
       );
@@ -160,8 +160,8 @@
           f.cache[a]
             ? (g = f.cache[a].cloneNode())
             : e.test(a)
-            ? (g = (f.cache[a] = f.createElem(a)).cloneNode())
-            : (g = f.createElem(a)),
+              ? (g = (f.cache[a] = f.createElem(a)).cloneNode())
+              : (g = f.createElem(a)),
           g.canHaveChildren && !d.test(a) ? f.frag.appendChild(g) : g
         );
       }
@@ -195,7 +195,7 @@
                     b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
                   );
                 }) +
-              ");return n}"
+              ");return n}",
           )(r, b.frag));
       }
       function q(a) {
@@ -207,7 +207,7 @@
             !c.hasCSS &&
             (c.hasCSS = !!k(
               a,
-              "article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}"
+              "article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}",
             )),
           j || p(a, c),
           a
@@ -283,9 +283,14 @@
         a
           ? a.t
             ? m(function () {
-                ("c" == a.t
-                  ? B.injectCss
-                  : B.injectJs)(a.s, 0, a.a, a.x, a.e, 1);
+                ("c" == a.t ? B.injectCss : B.injectJs)(
+                  a.s,
+                  0,
+                  a.a,
+                  a.x,
+                  a.e,
+                  1,
+                );
               }, 0)
             : (a(), h())
           : (q = 0);
@@ -404,7 +409,7 @@
                     : c,
                   i.noexec,
                   i.attrs,
-                  i.timeout
+                  i.timeout,
                 ),
                 (d(e) || d(j)) &&
                   f.load(function () {
@@ -484,7 +489,7 @@
             b.removeEventListener("DOMContentLoaded", A, 0),
               (b.readyState = "complete");
           }),
-          0
+          0,
         )),
       (a.yepnope = k()),
       (a.yepnope.executeStack = h),
